@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 5aa6b35d8a473c747aafe396367824c9
+  - enabled: 1
+    path: Assets/Scenes/AwakeningSite.unity
+    guid: fc4a2b676669fad44b1b006471db1518
+  - enabled: 1
+    path: Assets/Scenes/Cave1/Cave 1.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Cave1/Cave1Cell.unity
+    guid: 68c3e6f3c2d698c468917c01adefce53
+  - enabled: 1
+    path: Assets/Scenes/Central Field.unity
+    guid: eccbc88ea8d008949aa3e5e035687f01
+  - enabled: 1
+    path: Assets/Scenes/GreatTreeSite.unity
+    guid: 38830ed3834456c4ba5614ab2ddb3618
+  - enabled: 1
+    path: Assets/Scenes/Castle Field.unity
+    guid: 322f6204242d18d4e85fe2ce5ed1e9a7
+  - enabled: 1
+    path: Assets/Scenes/SnowZone.unity
+    guid: da65027cb536e9043b7ca8ce22c43689
+  - enabled: 1
+    path: Assets/Scenes/SnowCaves/CaveHeartS.unity
+    guid: 5a49d9f6a9a789f47904a7a2dbc0ff8d
+  - enabled: 1
+    path: Assets/Scenes/SnowCaves/CaveHeartSAux.unity
+    guid: 5ebc4ae606300b64c9cf539bfcb3bbdc
+  - enabled: 1
+    path: Assets/Scenes/SnowCaves/CentralHeartCave.unity
+    guid: 49dd2da7392bdf84db840ac8c500e5cf
+  - enabled: 1
+    path: Assets/Scenes/SnowCaves/SnowBoss.unity
+    guid: 71a069c6eb97c1f4991fffdf7092b59e
+  - enabled: 1
+    path: Assets/Scenes/SnowCaves/SnowCave1.unity
+    guid: c550b315cb062fd46a834f64722fae82
+  - enabled: 1
+    path: Assets/Scenes/SnowCaves/SnowHouse.unity
+    guid: c434583745a486249bc261c8b44bd05f
+  - enabled: 1
+    path: Assets/Scenes/CanyonZone.unity
+    guid: 89299338508568b4493be9c71338dadc
+  - enabled: 1
+    path: Assets/Scenes/CanyonCaves/CaveMiddleLeft.unity
+    guid: 15f31e12a52c1734eb9f9e8182f32246
+  - enabled: 1
+    path: Assets/Scenes/CanyonCaves/CaveMiddleRight.unity
+    guid: ba79bdb55d45be34fb7e90479d1a44a4
+  - enabled: 1
+    path: Assets/Scenes/CanyonCaves/CaveNorth.unity
+    guid: 725ad41f5921af047a7b619fcb1a3685
+  - enabled: 1
+    path: Assets/Scenes/CanyonCaves/CaveSouth.unity
+    guid: 6c257a217dd9c40438a7109f1a55056b
+  - enabled: 1
+    path: Assets/Scenes/Dungeons/DungeonNumeroDuo.unity
+    guid: 7c1a47707d6370a40bc7e7128ad267c2
+  - enabled: 1
+    path: Assets/Scenes/Dungeons/DungeonNumeroUno.unity
+    guid: e03278667d64dba4b9efd0ac40bb3077
+  - enabled: 1
+    path: Assets/Scenes/Dungeons/HoleDungeon 1.unity
+    guid: 9760c62aad89d9944b94899aa8ce9aa3
+  - enabled: 1
+    path: Assets/Scenes/CanyonAux/CanyonAux1.unity
+    guid: 6376ab751e787a844a41c3a8011fb3bb
+  - enabled: 1
+    path: Assets/Scenes/CanyonAux/CanyonAux2.unity
+    guid: 2085b924d4b5da647918da55786370fc
+  - enabled: 1
+    path: Assets/Scenes/Intro.unity
+    guid: 7f6830a996822fe4a94eab759dd6e382
+  - enabled: 1
+    path: Assets/Scenes/Ending1.unity
+    guid: 51c743c419308914181b966513efb631
+  - enabled: 1
+    path: Assets/Scenes/Ending2.unity
+    guid: 7d4f4b3125fe83343bd83f5a8ee28c43
+  m_configObjects: {}

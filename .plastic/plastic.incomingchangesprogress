@@ -1,0 +1,20 @@
+[
+  {
+    "MountId": "56e62dd7-241f-41e9-8c6b-dd4ca4513e62",
+    "AncestorCsetIds": [
+      41
+    ],
+    "SourceCsetId": 45,
+    "DestinationCsetId": 41,
+    "FileConflicts": [
+      {
+        "Path": "/Assets/Scenes/Dungeons/HoleDungeon 1.unity",
+        "ItemId": 7166,
+        "ParentItemId": 6968,
+        "BaseRevId": 26541,
+        "SourceRevId": 26634,
+        "DestinationRevId": 26541
+      }
+    ]
+  }
+]
