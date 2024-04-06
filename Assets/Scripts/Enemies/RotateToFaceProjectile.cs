@@ -9,6 +9,9 @@ public class RotateToFaceProjectile : MonoBehaviour
 
     GameObject player;
 
+    [SerializeField]
+    private bool pastContinuas = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +25,13 @@ public class RotateToFaceProjectile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (pastContinuas) 
+        {
+            Vector3 vectorToTarget = player.transform.position - transform.position;
+            float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg - rotationModifier;
+            Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
+            transform.rotation = q;
+        }
     }
 
     public void Face() 

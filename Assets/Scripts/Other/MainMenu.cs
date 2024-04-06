@@ -13,7 +13,11 @@ public class MainMenu : MonoBehaviour
 
     void Start()
     {
+        Health1.health1 = 12;
+        Health2.health2 = 12;
         AwakeningZone.lastScene = "MainMenu";
+        StaticVariables.winner = 0;
+        StaticVariables.isGameOver = false;
     }
     
     void Update()
@@ -33,9 +37,20 @@ public class MainMenu : MonoBehaviour
         StartCoroutine(SceneLoadDelay());
     }
 
+    public void VersusButton(){
+        fadeAnim.SetBool("isPressed", true);
+        clickSound.Play();
+        StartCoroutine(SceneLoadDelayVersus());
+    }
+    
     IEnumerator SceneLoadDelay(){
         yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene("Intro");
+    }
+
+    IEnumerator SceneLoadDelayVersus(){
+        yield return new WaitForSeconds(0.5f);
+        SceneManager.LoadScene("Versus");
     }
 
     IEnumerator QuitDelay(){

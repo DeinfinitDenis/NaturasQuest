@@ -55,6 +55,11 @@ public class BossAI : MonoBehaviour
 
     NavMeshAgent agent;
 
+    [SerializeField]
+    private GameObject dialogue;
+
+    bool usedDialogue = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -64,7 +69,7 @@ public class BossAI : MonoBehaviour
         //agent.updatePosition = false;
         //agent.updateUpAxis = false;
 
-
+        dialogue.SetActive(false);
     }
 
     // Update is called once per frame
@@ -117,6 +122,7 @@ public class BossAI : MonoBehaviour
             proj.GetComponent<Projectile>().abcd = transform.position;
         }
         yield return new WaitForSeconds(20 * (1 / attackSpeed));
+        if (!usedDialogue) StartCoroutine("triggerDialogue");
         isShoooting = false;
 
     }
@@ -147,5 +153,14 @@ public class BossAI : MonoBehaviour
         }
         isShoooting = false;
 
+    }
+
+    IEnumerator triggerDialogue() 
+    {
+        usedDialogue = true;
+        yield return new WaitForSeconds(7.5f);
+        dialogue.SetActive(true);
+        yield return new WaitForSeconds(6);
+        dialogue.SetActive(false);
     }
 }

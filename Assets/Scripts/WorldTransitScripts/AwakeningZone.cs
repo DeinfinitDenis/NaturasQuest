@@ -43,6 +43,9 @@ public class AwakeningZone : MonoBehaviour
             StaticVariables.snowZoneMainKey = false;
             StaticVariables.holeZoneMainKey = false;
             StaticVariables.NocturneIsDefeated = false;
+            StaticVariables.EminescuQuest = false;
+            StaticVariables.manoleQuest = false;
+            copac.localIf = false;
             
             for(int i = 0; i<=10; i++)
                 StaticVariables.Hearts[i] = false;

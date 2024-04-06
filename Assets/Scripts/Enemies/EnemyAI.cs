@@ -41,6 +41,8 @@ public class EnemyAI : MonoBehaviour
 
     private Animator animator;
 
+    GameObject player;
+
     [SerializeField]
     private float attackSpeed = 10;
 
@@ -49,16 +51,17 @@ public class EnemyAI : MonoBehaviour
 
     NavMeshAgent agent;
 
+    [SerializeField]
+    private bool pastContinuas = false;
+
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.Find("Player");
         em = GetComponent<EnemyMovement>();
         animator = GetComponent<Animator>();
         agent = GetComponent<NavMeshAgent>();
-        //agent.updatePosition = false;
-        //agent.updateUpAxis = false;
-
-
+        
     }
 
     // Update is called once per frame
@@ -66,14 +69,22 @@ public class EnemyAI : MonoBehaviour
     {
         agent.speed = movementSpeed;
         agent.stoppingDistance = stopDistance;
-        transform.rotation = new Quaternion(0, 0, 0, 0);
+        if (pastContinuas)
+        {
+            Vector3 vectorToTarget = player.transform.position - transform.position;
+            float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg + 90;
+            Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
+            transform.rotation = q;
+        }
+        else 
+        {
+            transform.rotation = new Quaternion(0, 0, 0, 0);
+        }
+        
         agent.SetDestination(transform.position);
         if (Vector2.Distance(GameObject.Find("Player").transform.position, transform.position) < chaseDistance)
         {
-
-
             agent.SetDestination(GameObject.Find("Player").transform.position);
-
         }
 
         if (Vector2.Distance(GameObject.Find("Player").transform.position, transform.position) < attackDistance && !isShoooting && hasProjectiles)

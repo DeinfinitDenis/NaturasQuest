@@ -11,6 +11,9 @@ TagManager:
   - Enemy
   - SnowBoss
   - Nocturne
+  - VPlayer1
+  - VPlayer2
+  - HealParticle
   layers:
   - Default
   - TransparentFX
